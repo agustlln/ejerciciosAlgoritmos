@@ -90,3 +90,29 @@ if (numero11 % 2 == 0) {
     alert("El número " + numero11 + " es impar");
 
 }
+// 3. 
+
+function Adivinar() {
+    let superior = 100;
+    let inferior = 0;
+    let noEncontrado = true;
+    while (noEncontrado) {
+        let mid = parseInt(inferior + ((superior - inferior) / 2));
+        console.log(mid);
+        console.log(((superior - inferior) / 2));
+        if (((superior - inferior) / 2) < 1) {
+            noEncontrado = false;
+            alert("Tu numero es el " + (parseInt(mid) + a));
+            break;
+        } //if
+        let res = confirm("Tu numero es menor o igual a " + mid);
+        if (res) {
+            superior = mid;
+        } else {
+            inferior = mid;
+        } //if
+        console.log(inferior, superior);
+    } //while
+} //adivinar
+
+Adivinar();
